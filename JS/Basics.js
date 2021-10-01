@@ -162,3 +162,18 @@ console.log(typeof age);     /*Outputs undefined as we have not
                               initialized the variable with a value*/ 
 
 
+/* 
+  Dynamic typing in JavaScript
+  -> Dynamic typing means changing the data type of a variable.
+*/
+
+// Example of Dynamic typing
+
+/* 
+ As we first initialized the 'jsIsFun' with a Boolean type to change
+ the variable data type. We don't have to re-declare the variable, we
+ can just access the variable name and change its type.      
+*/
+
+jsIsFun = 'It is fun';
+console.log(typeof jsIsFun);
