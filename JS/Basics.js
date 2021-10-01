@@ -161,3 +161,4 @@ let age;
 console.log(typeof age);     /*Outputs undefined as we have not 
                               initialized the variable with a value*/ 
 
+
