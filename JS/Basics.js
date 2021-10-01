@@ -177,3 +177,251 @@ console.log(typeof age);     /*Outputs undefined as we have not
 
 jsIsFun = 'It is fun';
 console.log(typeof jsIsFun);
+
+/**
+ * let, const & var in JavaScript.
+ * let, const & var are keywords to declare a variable
+   
+   Syntax - let <var_name> = <var_value>;
+            const <var_name> = <var_value>;
+            var <var_name> = <var_value>;     
+
+ * let - let keyword is use to declare a variable inside the block. We can 
+         access the value or re-assign new value by using the variable name.
+
+         Example: let age = 24;
+                  age = 25;         // Assigning new value 25 to the age variable
+                  console.log(age); 
+
+ * const - const keyword is also use to declare a variable and variables
+           declared with const maintain constant values. In const, we can't
+           re-assign a new value i.e. if we use const the variable is immutable.
+
+           Example: const pi = 3.14;
+                    console.log(pi); 
+
+ * var - var keyword is similar to let keyword we can re-assign new values i.e.
+         using var the variable is mutable.                
+         
+         Example: var firstName = 'Kakashi';
+                  console.log(firstName);
+                  firstName = 'Obito';     // assigning new string value
+                  console.log(firstName);      
+
+*/
+
+// Examples of let, const and var 
+
+let job_role = "DevOps engineer";
+
+console.log(job_role);
+
+job_role = "Security Architect";   // new job role assigned 
+
+console.log(job_role);
+
+// const example 
+
+const birthYear = 2000;
+
+console.log(birthYear);   // Outputs 2000
+
+// birthYear = 2001;
+// console.log(birthYear);
+
+/* 
+   If we try to assign new value it will through TypeError saying 
+   assignment to constant.
+*/
+
+// var example
+
+var fathersName = "Minato";
+
+console.log(fathersName);
+
+fathersName = "Jiraiya";  // var fathersName is changed to "Jiraiya"
+
+console.log(fathersName);
+
+/*
+------------------------------------
+       Basic Operators in JS
+------------------------------------
+-> Type of operators in JS:-
+   
+   -> Mathematical operator/ Arithmetic operator:
+      
+      Mathematical operator includes addition (+), subtraction (-),
+      multiplication (*), division (/), modulus (%) and exponentiation 
+      (**).
+
+   -> Comparison operator:
+      
+      Comparison operator in JavaScript includes,
+      
+      ->  '==' equal to.
+      ->  '===' equal value and equal type.
+      ->  '!=' not equal.
+      ->  '!==' not equal value or not equal type.
+      ->  '>' greater than.
+      ->  '<' less than.
+      ->  '>=' greater than or equal to.
+      ->  '<=' less than or equal to.
+
+   -> Logical operator:
+      
+      Logical operator in JavaScript includes, 
+
+      ->  '&&' logical and.
+      ->  '||' logical or.
+      ->  '!' logical not. 
+
+   -> Assignment operator:
+
+      Assignment operators assign values to JavaScript variables.
+
+      ->  '=' single equal to use to assign value to a variable.
+          e.g. let x = 10;
+      
+      ->  '+=' this assignment operator add a value to a variable.
+          For e.g. let x = 10;
+                   x += 10;
+                   console.log(x);   // outputs 20
+
+      ->  '-=' this assignment operator subtract a value from the variable.
+          For e.g. let x = 10;
+                   x -= 5;
+                   console.log(x);   // outputs 5
+                   
+      ->  '*=' this assignment operator multiplies a value with the variable.
+          For e.g. let x = 10;
+                   x *= 5;
+                   console.log(x);   // outputs 50
+      
+      ->  '/=' this assignment operator divides the value of the variable.
+          For e.g. let x = 10;
+                   x /= 5;
+                   console.log(x);   // outputs 2
+
+      ->  '%=' this assignment operator subtract a value from the variable.
+          For e.g. let x = 10;
+                   x %= 3;
+                   console.log(x);   // outputs 1 i.e. returns remainder
+
+*/
+
+
+// Example of Arithmetic Operator
+
+let num1 = 20;
+let num2 = 20;
+
+let sum = num1 + num2; // performing addition and storing the result in sum
+let diff = num1 - num2; // performing subtraction and storing the result in diff
+let product = num1 * num2; // performing multiplication
+let quotient = num1 / num2; // performing division
+let remainder = num1 % num2; // performing modulus operation
+
+// Outputting all the results to the console
+console.log(sum);       // returns 40
+console.log(diff);      // returns 0
+console.log(product);   // returns 400
+console.log(quotient);  // returns 1
+console.log(remainder); // return 0 
+
+// Example of Comparison Operator
+
+const first_name = 'Hinata';
+
+/* 
+ Using if-statement and equal value and equal type operator to validate
+ if both the strings are similar.
+*/
+
+if (first_name === 'Hinata'){  
+   console.log(true);
+}     
+
+// One more example
+
+let number1 = 10;
+let number2 = 15;
+
+/*
+   Using greater than operator to check which number is greater.
+   
+*/
+
+if (number1 > number2){
+   console.log(number1 +  ' is greater');   
+}
+else{
+   console.log(number2 + ' is greater');
+}
+
+// Examples of Logical Operator
+
+// Logical AND '&'
+
+let num_1 = 10;
+let num_2 = 20;
+
+/*
+ In logical AND '&' if both the conditions are true then it proceeds
+ to the next line or condition.  
+*/
+
+if (num_1 < num2 && num_1 < num_2){
+   console.log('Both the conditions are true.');
+}
+
+// Logical OR '||'.
+
+let k = 5;
+
+/*
+ In logical OR '||' if either one condition is true it proceeds to the
+ next line or condition.
+*/
+
+if (k == 5 || k == 3){
+   console.log("One condition is true.");
+}
+
+// Logical NOT '!'
+
+let num_3 = 10;
+
+/*
+ In the below example, the condition evaluates to to true i.e.
+ num_3 = 10 != 5 is true then it moves to the next condition. If the
+ condition evaluates to false i.e. 10 != 10 is false so condition
+ terminates.
+*/
+
+if(num_3 != 5){
+   console.log("True. 10 is not equal to 5");
+}
+
+/* 
+----------------------------------------
+    Assignment operators in JavaScript
+----------------------------------------
+*/ 
+
+let num_4 = 20;
+let num_5 = 2;
+
+console.log(num_4 += num_5);
+console.log(num_4 -= num_5);
+console.log(num_4 *= num_5);
+
+let num_6 = 35;
+let num_7 = 5;
+
+console.log(num_6 /= num_7); // returns quotient 
+
+let num_8 = 35;
+console.log(num_8 %= 5); // returns remainder i.e. 0
+
