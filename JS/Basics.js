@@ -332,26 +332,21 @@ console.log(remainder); // return 0
 
 // Example of Comparison Operator
 
-const first_name = 'Hinata';
-
 /* 
  Using if-statement and equal value and equal type operator to validate
  if both the strings are similar.
 */
 
+const first_name = 'Hinata';
+
 if (first_name === 'Hinata'){  
    console.log(true);
 }     
 
-// One more example
+// Using greater than operator to check which number is greater. 
 
 let number1 = 10;
 let number2 = 15;
-
-/*
-   Using greater than operator to check which number is greater.
-   
-*/
 
 if (number1 > number2){
    console.log(number1 +  ' is greater');   
@@ -359,6 +354,21 @@ if (number1 > number2){
 else{
    console.log(number2 + ' is greater');
 }
+
+// Some more examples of comparison operators
+
+let narutoAge = 22;
+let hinataAge = 20;
+
+if(narutoAge > hinataAge){
+   console.log(true);
+}
+
+if(hinataAge <= 20){
+   console.log(true);    // hinata's age is 20, 20 = 20 yes returns true.
+}
+
+console.log(hinataAge >= 25);  // returns false
 
 // Examples of Logical Operator
 
@@ -410,7 +420,7 @@ if(num_3 != 5){
 ----------------------------------------
 */ 
 
-let num_4 = 20;
+let num_4 = 20;  // here '=' itself is a operator
 let num_5 = 2;
 
 console.log(num_4 += num_5);
@@ -425,3 +435,23 @@ console.log(num_6 /= num_7); // returns quotient
 let num_8 = 35;
 console.log(num_8 %= 5); // returns remainder i.e. 0
 
+// some more examples of assignment operator
+
+let j = 20 + 5   // j is 25 now
+j *= 2;          // multiplication operator
+j++;         // increment operator j++ means j = j + 1
+j--;         // decrement operator j-- means j = j - 1    
+j--;         // Ouputs 59 as 61 - 2 = 59.
+console.log(j+= 10);  // j += 10 means j = j + 10 i.e. 25 + 10 = 35 
+
+// Exponentiation operator example
+
+let expo = 2 ** 3;    // 2 ** 3 means 2 to the power of 3 = 8
+console.log(expo);
+
+// Concatenation operator '+'
+
+let firstText = 'Hello';
+let secText = 'how are you.';
+
+console.log(firstText + ' ' + secText);
