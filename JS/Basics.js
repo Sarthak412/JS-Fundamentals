@@ -455,3 +455,54 @@ let firstText = 'Hello';
 let secText = 'how are you.';
 
 console.log(firstText + ' ' + secText);
+
+/*
+---------------------------------------
+           Operator Precedence
+---------------------------------------
+*/
+
+// Example of operator precedence
+
+console.log(5 + 5 * 3);
+
+/*
+ The precedence in the above code is multiplication first then addition
+ i.e. multiplication has higher precedence than addition. But if we use
+ parenthesis for addition in the above code addition will be performed
+ first then multiplication. Check the below example:
+*/
+
+console.log((5 + 5) * 3); // returns 30 
+
+/*
+Here addition has higher precedence i.e. 5 + 5 = 10 then multiplication
+10 * 3 = 30.
+*/
+
+// Operator Precedence
+
+console.log(5 + 3 * 10 / 5);  // returns 11
+
+/*
+In the above example, division will be performed first i.e. 10/5 = 2,
+then multiplication has second highest precedence in the above example
+so 3 * 2 = 6. Then finally addition is performed i.e. 6 + 5 = 11.
+
+Operators with higher precedence in order
+
+1] Parenthesis/Brackets.
+2] Exponentiation.
+3] Division.
+4] Multiplication. 
+5] Addition.
+6] Subtraction.
+
+*/
+
+console.log(2 ** 3 / 2);  // returns 4
+
+/* 
+here exponentiation is performed i.e. 2 ** 3 = 8 and 8 is divided by 2
+which gives 4.
+*/ 
