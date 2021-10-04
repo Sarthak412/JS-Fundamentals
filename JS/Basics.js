@@ -508,3 +508,100 @@ which gives 4.
 */ 
 
 
+/*
+--------------------------------------
+     Strings and Template Literals
+--------------------------------------
+*/
+
+// Example of Strings in Javascript 
+
+const firstname = 'Gojo';
+const job = 'Sorcerer';
+const birth_year = 2000;
+const year = 2021;
+
+const pData = "I'm " + firstname + ", a " + (year - birth_year) + " year old " +
+job;
+
+console.log(pData);     // Outputs "I'm Gojo a 21 year old sorcerer".
+
+// Template Literals in JavaScript
+
+/*
+ -> In JS, if we use backtick JS will understand that we are trying to 
+ write template string. 
+ -> Using Template string it becomes easy to write and manage string.    
+*/
+
+// Template string for above example
+
+const newpData = `I'm ${firstname}, a ${year - birth_year} year old ${job}.`;
+console.log(newpData);
+
+// Multi-line strings in JavaScript
+// To go on the next line we use '\n\' in JavaScript.
+// But this method makes the code hard to read and understand.
+
+console.log("String with \n\
+multiple \n\
+lines in JS.");
+
+// So we can use the backtick to write a multi-line string. For example,
+
+console.log(`This is 
+a multi-line
+string in JavaScript 
+using template literal.`);
+
+
+/*
+------------------------------------------
+   Taking Decisions: if/else statements 
+------------------------------------------
+   -> if/else statements in JavaScript are used to check a certain 
+      condition.
+   -> If a condition evaluates to true print the block inside the if 
+      part and if the condition evaluates to false the block inside the 
+      else part is executed.
+*/
+
+// Example of if/else statement in JavaScript
+
+const my_age = 20;
+/* 
+You don't have to create a boolean variable you can just write the
+condition i.e.
+
+   if(my_age >= 18){
+      ---||---
+   }
+   else{
+      ---||---
+   }
+
+*/ 
+const requiredAge = my_age >= 18; 
+
+if(requiredAge){
+   console.log(`You are over 18 you can drive 🚗.`)
+}
+else{
+   const yearsLeft = 18 - my_age;
+   console.log(`You are underage comeback after ${yearsLeft} years.`);
+}
+
+// One more example of If/else statement
+
+let my_birthYear = 2000;
+
+let century;
+
+if(my_birthYear <= 2000){
+   century = 20;
+}
+else{
+   century = 21;
+}
+
+console.log(`You are from ${century} century.`);
