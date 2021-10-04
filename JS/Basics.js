@@ -506,3 +506,5 @@ console.log(2 ** 3 / 2);  // returns 4
 here exponentiation is performed i.e. 2 ** 3 = 8 and 8 is divided by 2
 which gives 4.
 */ 
+
+
