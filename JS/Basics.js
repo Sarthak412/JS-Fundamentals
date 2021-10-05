@@ -767,3 +767,65 @@ if(salary){
 */
 
 
+/*
+--------------------------------------------
+      Equality Operators: == vs ===
+--------------------------------------------
+ -> '==' is also known as loose equality operators.
+ -> '===' is also known as strict equality operators.
+*/
+
+const userAge = 18;
+
+// Strict equality operator
+if(userAge === 18){
+   console.log('You just became an adult. (strict)');
+}
+
+// loose equality operator
+/*
+ -> Always prefer strict equality operator (===).
+ -> Loose equality operator can create errors or bugs in your program.
+ -> And many JS developers would prefer to use strict equality operator.
+*/
+
+if(userAge == 18){
+   console.log('You just became an adult. (loose)');
+}
+
+
+// Taking input from the user using 'Prompt' function
+
+/* Commenting this code so you can try the prompt func one-by-one */
+
+// const favorite = Number(prompt("Enter your favorite number: ")); 
+
+// if(favorite === 20){
+//    console.log("Yayyy 20 is a cool number!");
+// }
+// else if(favorite === 4){
+//    console.log("4 is also cool");
+// }
+// else{
+//    console.log("The number you entered was neither 20 nor 4.");
+// }
+
+// if(favorite !== 20){
+//    console.log("Why not 20?");
+// }
+
+
+// One more example for prompt function
+
+// const useInput = prompt("Please enter a number: ");
+
+// if(useInput >= 18){
+//    alert(`Your age is ${useInput}, you can drive.`);
+// }else{
+//    const userAge = 18 - useInput;
+//    alert(`You are young to drive. Come back after ${userAge} years.`);
+// }
+
+
+
+
