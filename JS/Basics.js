@@ -605,3 +605,165 @@ else{
 }
 
 console.log(`You are from ${century} century.`);
+
+
+/*
+-----------------------------------------------
+             Type Conversion & Coercion
+-----------------------------------------------
+
+* Type conversion - Type conversion in JS means transfer of data from
+  one type to another.
+
+* Type coercion - Type coercion refers to the process of automatic or
+  implicit conversion of values from one data type to another.
+
+*/
+
+// Example of type conversion
+
+const inputYear = '2000';   // Initialized as a string
+
+/* 
+Type conversion is done using the Number function i.e. string is converted
+to number.
+*/
+
+console.log(Number(inputYear), inputYear); 
+// Outputs 2000 & '2000' i.e. one is a number & other is a string
+// which is inside the single quotes
+
+console.log(inputYear + 5); 
+
+/*
+   Outputs 20005 because the main variable i.e. inputYear is still a
+   string.
+   So if you want to perform the '+' operation you have to convert
+   the string into number. For example, check the below code -   
+*/
+
+console.log(Number(inputYear) + 5);   
+
+/*
+ Outputs 2005 as we converted the type from string to number using 
+ 'Number()' function.
+*/
+
+// Lets try to convert a string to a number.
+
+console.log(Number('Naruto')); 
+
+// Outputs 'NaN' which means Not a number
+
+// Lets try to convert a number to a string.
+
+console.log(String(23), 23);
+// '23' 23
+// Outputs string value in white and number in purple
+
+// Example of type coercion 
+
+console.log("I'm a " + 20 + " year old developer.");
+
+/*
+Check the above line, there are two types in a single statement i.e.
+there is a string and a number still we get the output "I'm a 20 year old
+developer" because as we perform concatenation operation using '+'
+JavaScript automatically converts the type of number to string which is as
+Type Coercion.
+*/
+
+// Some more examples of Type coercion
+
+console.log('15' - '5' - 5);   // outputs 5
+
+/*
+ In the above line of code, we can see strings performing subtraction
+ operation i.e. because of type coercion the strings are converted to
+ numbers i.e. 15 - 5 - 5 = 5.
+*/
+
+console.log('15' + '5' + 5);  // outputs 1555
+
+/*
+ This line outputs 1555 because the first number is a string and 
+ instead of addition operation concatenation is done with all the 
+ elements. Hence, it returns 1555.
+*/
+
+// Check example for multiplication and division operation
+
+console.log('12' * '2');     
+// Outputs 24 because strings are converted to numbers
+
+console.log('12' / '2');    // outputs 6
+// It is similar for division strings are converted to numbers
+
+// Let's check what happens if we use logical operators
+console.log('15' > '10'); 
+
+/* 
+Same thing happens string are first converted to numbers then the 
+logical operation is done.
+*/  
+
+// Guess the Output
+
+let h = '2' + 3;
+h = h - 4;
+console.log(h);
+
+// Outputs 19 
+
+/*
+ Guess the output explanation: 
+
+ * The above code outputs 19 because in the first line let h = '2' + 3
+   there is a string and then a number. Hence, instead of addition 
+   concatenation operation is performed i.e. '2' + '3' = 23;
+   
+ * Now value of h is 23, but in the next line we are performing 
+   subtraction so 23 - 4 is 19. Hence, it returns 19 as the final output. 
+*/
+
+
+/*
+---------------------------------------------
+            Truthy and Falsy values
+--------------------------------------------- 
+ * In JavaScript, there are 5 falsy value -
+   - 0.
+   - ' '.
+   - undefined.
+   - null.
+   - NaN. 
+*/
+
+console.log(Boolean(0));            // false
+console.log(Boolean(undefined));    // false
+console.log(Boolean('Sarthak'));    // true
+console.log(Boolean({}));           // true
+console.log(Boolean(''));           // false
+
+
+// Examples of truthy and falsy values
+
+//const salary = 0;
+const salary = 1000; 
+
+if(salary){
+   console.log(`Your account is debited with ${salary}.`);
+}else{
+   console.log(`You didn't get paid.`);
+}
+
+/*
+ The above code executes the else part because we initialized the salary
+ variable to '0' which is a falsy value. Because of falsy value else
+ part is executed.
+
+ If we set the value of the salary to 1000 then the if block will be
+ executed. Let's try that in the above code.
+*/
+
+
