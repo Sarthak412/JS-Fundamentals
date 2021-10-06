@@ -108,3 +108,63 @@ else if(avgSharks === avgHammerh && avgSharks >= 100 && avgHammerh >= 100){
 }
 
 
+// Coding challenge switch into if-else
+
+const day = 'monday';
+
+/* 
+const day = prompt("Enter day: "); try this prompt to get input from
+the user.
+*/
+
+if(day === 'monday'){
+  console.log("Its monday :(");
+}
+else if(day === 'tuesday'){
+  console.log("Its tuesday :o");
+}
+else if(day === 'wednesday' || day === 'thursday'){
+  console.log("Its wednesday :|");
+}
+else if(day === 'friday'){
+  console.log("Its friday :)");
+}
+else if(day === 'saturday' || day === 'sunday'){
+  console.log("Weekend is back 🥳");
+}
+else{
+  console.log("Invalid day!!!");
+}
+
+/* 
+  Coding Challenge - 4
+  - Your task is to calculate the tip, depending on the bill value.
+    Create a variable called 'tip' for this. It's not allowed to use an 
+    if/else statement.
+  - Print a string to the console containing the bill value, the tip, and
+    the final value (bill + tip).
+    Example: 'The bill was 275, the tip was 41.25, and the total value 
+    316.25'
+  - Test data: Test for bill values 275, 40 and 430.
+*/
+
+const bill = 275;
+let tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+console.log(tip);
+
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
+
+
+// Lets try this challenge using if/else statements
+
+if(bill >= 50 && bill <= 300){
+  tip = bill * 0.15;
+}
+else{
+  tip = bill * 0.2;
+}
+
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
+
+

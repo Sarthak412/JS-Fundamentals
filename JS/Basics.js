@@ -884,3 +884,121 @@ if(driverLicense && shouldDrive && !isTired){
 else{
    console.log("Someone else should drive.");
 }
+
+
+/*
+----------------------------------------
+             Switch Statement
+----------------------------------------
+-> The JavaScript 'switch' keyword is used to create multiple conditional 
+   statements, allowing you to execute different code blocks based on 
+   different condition.
+-> Example of 'switch' statement.
+*/
+
+const day = 'Monday';
+
+/*
+ Use the prompt function to take the input from the user for specific 
+ condition to execute.
+*/
+
+//const day = prompt("Enter day: ");
+
+switch(day){
+   case 'Monday':
+      console.log("It's monday start with JavaScript.");
+      break;
+   case 'Tuesday':
+      console.log("It's Tuesday start with your project.");   
+      break;
+   case 'Wednesday':
+      console.log("Wednesday is for working on website.");
+      break;
+   case 'Thurday':
+      console.log("Thurday is for aptitude preparation.");
+      break;
+   case 'Friday':
+      console.log("Friday JavaScript revision."); 
+      break;
+   case 'Saturday':
+   case 'Sunday':
+      console.log("It's Weekend 😎");
+      break;
+   default:
+      console.log("This day is invalid.");
+      break;
+}
+
+//----------------------------------------
+//        Statments and expressions
+//----------------------------------------
+
+/*
+ Expressions in JavaScript
+ - Basic Example of expressions are:
+   - 3 + 4 
+   - (4 * 5) / 2  etc.
+*/
+
+// For example
+
+const str = "23 year old"; // this itself is a expression
+
+console.log(`I'm ${str}`);
+
+// One more example
+
+const l = 25;
+const b = 5;
+
+const prod = l * b;
+console.log(`The product is ${prod}`);  // returns 125
+
+// All of the above examples are expressions
+
+
+/*
+------------------------------------
+         Conditional Ternary
+------------------------------------
+-> The conditional (ternary) operator is the only JavaScript operator 
+   that takes three operands: a condition followed by a question mark 
+   ( ? ), then an expression to execute if the condition is truthy 
+   followed by a colon ( : ), and finally the expression to execute if 
+   the condition is falsy.
+
+   Example: const num = 20;
+
+            num >= 18 ? console.log("Greater"): console.log("Smaller");
+*/
+
+// Some more example of (ternary) operator.
+
+const yourAge = 23;
+
+yourAge >= 18 ? console.log("You are an adult.") : 
+                console.log("You are young");
+
+// lets try to write this logic in if-else block
+
+if(yourAge >= 18){
+   console.log("Your are an adult.");
+}
+else{
+   console.log("You are still young.");
+}
+
+/*
+ -> Just see the difference between the ternary operator (?:) and the 
+    if-else block. Ternary operator makes it easier to write conditional 
+    statements.
+
+ -> We can also use ternary operator (?:) inside a template literal.   
+*/
+
+// Example
+
+console.log(`I am ${yourAge >= 18 ? 'an adult' : 'still young'}`);
+// returns 'I am an adult' as the yourAge variable is initialized to 23.
+
