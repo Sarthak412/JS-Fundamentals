@@ -48,3 +48,63 @@ Outputs:  Naruto's BMI is (25.71166207529844) which is higher then
 Sasuke's BMI (23.959094229364496).
 */
 
+
+/*
+ Coding Challenge - 3
+ 
+ 1. Calculate the average score for each team, using the test data
+    below.
+ 2. Compare the team's average scores to determine the winner of the 
+    competition, and print it to the console. Don't forget that there can
+    be a draw, so test for that as well (draw means they have the same
+    average score).
+ 
+ Test Data 1: Sharks score 96, 108 and 89. Hammer_heads score 88, 91 and 
+              110.
+ Test Data 2: Sharks score 97, 112 and 101. Hammer_heads score 109, 95
+              and 123.                
+
+*/
+
+// const avgSharks = (97 + 112 + 101)/3;
+// const avgHammerh = (109 + 95 + 123)/3;
+
+// console.log(avgSharks, avgHammerh);
+
+// if(avgSharks > avgHammerh){
+//   console.log("Team Sharks wins.");
+// }
+// else if(avgSharks === avgHammerh){
+//   console.log("There's a Draw between both the teams");
+// }
+// else{
+//   console.log("Team Hammer Head wins.");
+// }
+
+/*
+ Bonus Part in the coding challenge
+ -> The team wins if avearage is more then or equal to 100.
+*/ 
+
+// Bonus part - 1
+
+const avgSharks = (97 + 112 + 101)/3;
+const avgHammerh = (109 + 95 + 102)/3;
+
+console.log(avgSharks, avgHammerh);
+
+// Checking avg is greater then 100
+
+if(avgSharks > avgHammerh && avgSharks >= 100){
+  console.log("Team Sharks wins.");
+}
+else if(avgSharks < avgHammerh && avgHammerh >= 100){
+  console.log("Team Hammer Head wins.");
+}
+else if(avgSharks === avgHammerh && avgSharks >= 100 && avgHammerh >= 100){
+  console.log("There's a Draw between both the teams.");
+}else{
+  console.log("Nobody wins 😥");
+}
+
+

@@ -827,5 +827,60 @@ if(userAge == 18){
 // }
 
 
+/*
+------------------------------------
+          Logical Operators
+------------------------------------
+-> AND, OR and NOT operators.
+-> Definitions of all these operators are given in the Basic operator
+   section.
+-> Examples of Logical operators.
+*/
 
+const driverLicense = true;
+const shouldDrive = true;
 
+console.log(driverLicense && shouldDrive);  // Logical AND 
+/* 
+Evaluates to true because as we know both the conditions are true.
+If either one condition was false it will return false.
+*/ 
+
+console.log(driverLicense || shouldDrive);  // Logical OR
+/*
+This also evaluates to true. As we know for logical OR either one 
+condition should be true.
+*/
+
+console.log(!driverLicense);       // Logical NOT
+// The logical NOT converts the true statement to false and 
+// false statement to true.
+
+/* 
+-> As we have initialized both the conditions to true and we are using 
+   logical AND operator the following condition evaluates to true so 
+   the statement under 'if' block is executed.
+
+-> Try changing one of the values to false and check to output.
+*/
+
+// We will create one more variable isTired
+
+const isTired = true;  // True
+
+/* 
+-> We included the third variable using NOT operator which changes 
+   the true to false. And as we know in AND all the conditions should 
+   evaluate to true otherwise it returns false.
+
+-> Try changing the 'isTired' variable to false which will be converted
+   to true after using NOT operator which will evaluate the whole 
+   condition to true, and then the if block is executed.
+*/  
+
+if(driverLicense && shouldDrive && !isTired){
+   console.log("He is old enough to drive.");
+}
+else{
+   console.log("Someone else should drive.");
+}
