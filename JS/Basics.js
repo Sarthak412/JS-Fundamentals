@@ -1002,3 +1002,4 @@ else{
 console.log(`I am ${yourAge >= 18 ? 'an adult' : 'still young'}`);
 // returns 'I am an adult' as the yourAge variable is initialized to 23.
 
+console.log("Hello World");
