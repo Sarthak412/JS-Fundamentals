@@ -69,3 +69,25 @@ const finalSum =  twoSum(5, 5);
 console.log(finalSum);
 
 
+/*
+---------------------------------------------
+     Function Declarations vs Expressions
+---------------------------------------------
+*/
+
+// Function declaration
+function calcAge(birthYear){
+    return 2021 - birthYear;
+}
+
+const age = calcAge(2000);
+console.log(age);
+
+// Expressions
+
+const calcAge2 = function (birthYear) {   // Another way of declaring a function
+    return 2021 - birthYear;     
+}
+
+const age2 = calcAge2(2000);
+console.log(age, age2);       // outputs 21 21
