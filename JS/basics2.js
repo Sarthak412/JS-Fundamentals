@@ -91,3 +91,40 @@ const calcAge2 = function (birthYear) {   // Another way of declaring a function
 
 const age2 = calcAge2(2000);
 console.log(age, age2);       // outputs 21 21
+
+
+// Arrow function
+
+const calcAge3 = birthYear => 2021 - birthYear;   // Arrow function
+const age3 = calcAge3(2000);  // capturing the value and storing it in a variable
+console.log(age3);    // Displaying the output to the console
+
+// Let's see one more example of arrow function
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+    const age4 = 2021 - birthYear;
+    const retirement = 55 - age4;
+    return `${firstName} retires in ${retirement} years.`;
+}
+
+console.log(yearsUntilRetirement(2000, 'Sarthak'));
+console.log(yearsUntilRetirement(2002, 'Mitesh'));
+
+
+// Functions calling other functions 
+
+
+const cutPieces = function (fruit){
+    return fruit * 4;
+}
+
+const fruitProcessor = function (apples, oranges){
+
+    const applePieces = cutPieces(apples);
+    const orangePieces = cutPieces(oranges);
+    
+    const juice2 = `Juice made of ${applePieces} pieces of apple and ${orangePieces} pieces of oranges.`;
+    return juice2;
+}
+
+console.log(fruitProcessor(2, 3));
