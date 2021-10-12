@@ -128,3 +128,85 @@ const fruitProcessor = function (apples, oranges){
 }
 
 console.log(fruitProcessor(2, 3));
+
+
+// Reviewing functions 
+
+// separate function to calculate age 
+const yourAge = function(yourBirthYear) {
+    return 2021 - yourBirthYear;
+}
+
+const ageToDrive = function (firstName, yourBirthYear){
+
+    const your_Age = yourAge(yourBirthYear);
+
+    // checking if he is underage using if/else block
+    if(your_Age > 18){
+        return `${firstName} you are ${your_Age} you can drive.`;
+    }
+    else{
+        return `You are under 18 comeback when you are 18.`;
+    }
+
+}
+
+console.log(ageToDrive('Sarthak', 2005));
+console.log(ageToDrive('Aryan', 1999));
+
+// Lets check example of all 3 types of functions
+
+// 1st type: Function Declaration 
+
+/*
+    function <function_name> () {
+        return statements;
+    }
+*/
+
+function additionFunc(num_1, num_2) {  // declaring function additionFunc with parameters num_1 & num_2
+    console.log(num_1, num_2);        // Logging both the values to the console          
+    const finalSum = num_1 + num_2;  // Variable to store the sum of both parameters
+    return finalSum;                // returning the final sum
+}
+
+/* Storing the function value in another variable */
+const final_sum = additionFunc(15, 5);     
+console.log(final_sum);    // Outputting final sum i.e. returns 20
+
+
+// 2nd type: Function Expression 
+
+/*
+    const <variable_name> = function (parameters){
+        return statements;
+    };
+*/
+
+// storing the function value in a variable
+const requiredAge = function (myAge){
+    if(myAge > 18){
+        return `Your age is ${myAge} you can drive.`;
+    }
+    else{
+        return `Your age is ${myAge} you cannot drive.`;
+    }    
+}; 
+
+const enteredAge = requiredAge(15);
+console.log(enteredAge);
+
+
+// 3rd type Arrow function
+// Arrow function is mostly used for a quick one-line function.
+
+/*
+    const <function_name> = parameters => statements;
+*/
+
+const votingAge = myAge2 => myAge2 >= 18 ? `You can vote`:`You cannot vote`;
+
+
+const finalVoting = votingAge(18);
+console.log(finalVoting);
+
