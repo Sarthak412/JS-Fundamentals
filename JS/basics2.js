@@ -210,3 +210,122 @@ const votingAge = myAge2 => myAge2 >= 18 ? `You can vote`:`You cannot vote`;
 const finalVoting = votingAge(18);
 console.log(finalVoting);
 
+
+
+/*
+-------------------------------------------
+           Introduction to Arrays
+-------------------------------------------
+*/
+
+// There are Two ways of declaring an array
+
+const powerFullNinjas = ['Naruto', 'Sasuke', 'Minato', 'Itachi'];
+
+console.log(powerFullNinjas);
+
+// 2nd way using Array function
+
+const highestPower = new Array(100, 95, 100, 99);
+
+console.log(highestPower);
+
+/* 
+As we know array starts from 0 to n so if we want to access a specific
+element in the array we can use the array name and its index. Look at the 
+below example, 
+*/
+
+console.log(powerFullNinjas[0], powerFullNinjas[2], powerFullNinjas[1]);
+
+// As our first array consists of 4 ninjas so our array starts from 0 to 3
+
+// If we want to access the last element of the array we will write,
+
+console.log(powerFullNinjas[3]);
+
+/* 
+There's one more way if you want print the last element in the array
+i.e. using length function. For example,
+*/
+
+console.log(powerFullNinjas[powerFullNinjas.length - 1]); // returns Itachi
+
+/*
+ * It returns the last element of the array because using length function 
+   we get the actual size of the array and the size of the array is 4. 
+   And if we write length - 1 gives us 3 which points to the last element 
+   in the array. For example, 
+
+   console.log(powerFullNinjas[powerFullNinjas.length - 1]) = 4 - 1 = 3.
+   console.log(powerFullNinjas[3]);
+
+ * That's the basic way of declaring and accessing the elements in the 
+   array. 
+*/
+
+// Let's see how can we insert into array
+
+powerFullNinjas[2] = 'Jiraya'; // We updated the 2nd position to 'Jiraya'
+
+// Let's log this updated array to the console
+
+console.log(powerFullNinjas);
+
+// Returns ['Naruto', 'Sasuke', 'Jiraya', 'Itachi']
+// As we can see the second position is updated to 'Jiraya'
+
+/*
+ * As we can see here our array was declared using const keyword but still 
+   we change/updated the values in the array.
+   
+ * That happens because, arrays can be mutated. And const keyword gives an
+   error when we try to change the primitive value.
+ 
+ * Even if we update some part of the array we cannot change the whole array.
+   For example,
+
+   powerFullNinjas = ['Hinata', 'Sakura', 'Obito'];
+
+   we cannot change the array like that it will through an error saying
+   'Assignment to constant variable'. 
+*/
+
+// Array can store different types of data together i.e. string and number
+
+const narutoInfo = ['Naruto', 'Uzumaki', 24, 'Hokage'];
+console.log(narutoInfo);
+
+// As you can see we stored numbers and string together
+// We can also store arrays inside arrays for example,
+
+const arrInarr = ['Naruto', 'Uzumaki', 24, 'Hokage', powerFullNinjas];
+
+// We stored the first array i.e. 'powerFullNinjas' in 'arrInarr'.
+
+// We can create a variable to store data and refer the variable in the array
+// For example,
+
+const firstHokage = 'Hashirama';
+const posi = '1st Hokage';
+
+const newArr = [firstHokage, posi, 35, 'Powerfull'];
+console.log(newArr);
+
+// As you can see we referred the data from a variable in the array.
+
+// Exercise 
+
+const calc_Age = function (b_year){
+    return 2021 - b_year;
+}
+
+const y = [2000, 2001, 2004, 2006];
+
+const a1 = calc_Age(y[0]);
+const a2 = calc_Age(y[1]);
+const a3 = calc_Age(y[2]);
+
+console.log(a1, a2, a3);    // returns 21 20 17
+
+
