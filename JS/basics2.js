@@ -329,3 +329,98 @@ const a3 = calc_Age(y[2]);
 console.log(a1, a2, a3);    // returns 21 20 17
 
 
+/*
+-----------------------------------------------
+       Basic Array operations (Methods)
+-----------------------------------------------       
+*/
+
+/*
+ push() function: push() function in array is used to insert new element 
+ at the end of the array.
+*/
+
+// Example of push()
+
+const friends = ['Sarthak', 'Aryan'];
+
+friends.push('Mitesh');
+friends.push('Madara');
+
+console.log(friends);
+
+/*
+ unshift() function: unshift() function in array is used to insert new 
+ element at the beginning of the array.
+*/
+
+// Example of unshift()
+// Using the same array 'friends'.
+
+friends.unshift('Itachi');
+console.log(friends);
+
+/*
+ pop() function: pop() function in array is used to remove the element
+ from the array, pop() removes the last element.
+*/
+
+friends.pop();
+console.log(friends);  // 'Madara' is removed from the array.
+
+/*
+ shift() function: shift() function in array is used to remove element 
+ from the beginning of the array.
+*/
+
+friends.shift();
+console.log(friends);
+
+/*
+ indexOf() function: indexOf() function in array returns the index of the
+ array elements.
+*/
+
+console.log(friends.indexOf('Mitesh'));
+
+// returns -1 for elements which are not present in the array
+console.log(friends.indexOf('Itachi'));
+
+/*
+ -> includes() function: includes() function in array returns boolean 
+ values. For example, if the element is present in the array it'll return 
+ true else false.
+ -> includes() can be use to write conditional statements.
+    
+ Let's see one example:
+*/
+
+console.log(friends.includes('Sarthak'));  // returns true
+
+console.log(friends.includes('Madara'));  // returns false
+
+// Let's add a number to array 
+
+friends.push(34);
+console.log(friends);
+
+console.log(friends.includes('34')); 
+
+/* 
+ The above statement returns false because the number is treated as a 
+ string.
+*/
+
+console.log(friends.includes(34));      // returns true 
+
+// Let's write a conditional statement using includes function
+
+if(friends.includes('Mitesh')){
+    console.log("Yes you have a friend named Mitesh");
+}
+
+if(friends.includes('Itachi')){
+    console.log("Yes you have a friend named Mitesh");
+}else{
+    console.log("This name is not in your friend list");
+}
