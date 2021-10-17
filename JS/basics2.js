@@ -424,3 +424,79 @@ if(friends.includes('Itachi')){
 }else{
     console.log("This name is not in your friend list");
 }
+
+
+/*
+----------------------------------------
+          Introduction to Objects
+----------------------------------------
+*/
+
+// Object in JavaScript
+
+const sarthakInfo = {
+    firstName : 'Sarthak',
+    lastName : 'Kamble',
+    age : 20,
+    job : 'Software Engineer',
+    skills : ['C++', 'Python', 'JavaScript']
+};
+
+console.log(sarthakInfo);
+
+/*
+-> 'sarthakInfo' is a object and the key values in that object are 
+   'first_Name', last_Name etc. 
+-> The object is created using curly braces with a variable name.
+*/
+
+
+/*
+-------------------------------------------
+          Dot vs. Bracket notation
+-------------------------------------------          
+
+* To retrieve a property from the object there are two ways, 
+  - Dot operator.
+  - Bracket operator.
+*/
+
+// Lets use the 'dot' operator to retrieve the property from the object
+
+console.log(sarthakInfo.firstName);
+
+// returns first_name from the object.
+
+console.log(sarthakInfo.lastName);     // return last_name
+
+// Let's use the 'bracket' operator to retrieve the property from the object
+
+console.log(sarthakInfo['first_Name']);
+
+const nameKey = 'Name';
+
+console.log(sarthakInfo['first' + nameKey]);
+console.log(sarthakInfo['last' + nameKey]);
+
+// What if the user wants to access a specific property
+
+// Check this code:
+
+/*
+const infoNeeded = prompt("What do you want to know about Sarthak? firstName, lastName, age, job, skills");
+
+if(sarthakInfo[infoNeeded]){
+    console.log(sarthakInfo[infoNeeded]);
+}else{
+    console.log("Wrong request!! Select from firstName, lastName, age, job, skills");
+}
+
+sarthakInfo.location = 'Mumbai, India';
+sarthakInfo["Github"] = 'Sarthak412';
+*/
+
+// Challenge
+// Sarthak has 3 skills, and his favorite skill is C++
+
+console.log(`${sarthakInfo.firstName} has ${sarthakInfo.skills.length} skills, 
+and his favorite skills is ${sarthakInfo.skills[0]}.`);
