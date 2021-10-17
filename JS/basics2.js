@@ -500,3 +500,45 @@ sarthakInfo["Github"] = 'Sarthak412';
 
 console.log(`${sarthakInfo.firstName} has ${sarthakInfo.skills.length} skills, 
 and his favorite skills is ${sarthakInfo.skills[0]}.`);
+
+/*
+-----------------------------------------
+              Object Methods
+-----------------------------------------              
+
+-> We can store mulitple types of data in an object.
+-> We can write a function inside a object. For example,
+
+*/
+
+const sarthak_Info = {
+    firstName: 'Sarthak',
+    lastName: 'Kamble',
+    birthY: 2000,
+    job: 'Cyber Security Analyst',
+    hasDriversLicense: true,
+    
+    // calc_Age : function(birthY) {
+    //     return 2021 - birthY;
+    // }
+
+    // calc_Age : function(birthY) {
+    //     return 2021 - this.birthY;
+    // }
+
+    calc_Age : function() {
+        this.age = 2021 - this.birthY;  // Creating a new property age
+        return this.age;
+    },
+
+    getSummary : function() {
+        return `${this.firstName} is a  ${sarthak_Info.calc_Age()} year old Engineer, and he has ${this.hasDriversLicense ? 'a' : 'no'} drivers license.`;
+    }
+
+};
+
+console.log(sarthak_Info.calc_Age());   // returns 21
+
+// logging getSummary to the console
+
+console.log(sarthak_Info.getSummary());
