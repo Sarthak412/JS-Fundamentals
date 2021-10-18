@@ -282,3 +282,57 @@ console.log(bills, tips);
 const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
 console.log(total);
+
+
+/*
+  Coding challenge-3 
+  
+  * Let's go back to Naruto and Sasuke comparing BMIs. This time, let's 
+    use objects to implement the calculations. 
+    Remember: BMI = mass/height ** 2. (mass in kg and height in meter)
+
+  * For each of them, create an object with properties for their full name,
+    mass, and height (Naruto Uzumaki and Sasuke Uchiha).
+
+  * Create a 'calcBMI' method on each object to calculate the BMI (the same
+    method on both the objects). Store the BMI value to a property, and 
+    also return it from the method.
+  
+  * Log to the console who has the higher BMI, together with the full name 
+    and the respective BMI. 
+    Example: "Naruto's BMI (25.4) is higher than Sasuke's (23.4) BMI".
+  
+  * Test Data: Naruto's weights 78 kg and is 1.69 m tall.
+               Sasuke's weights 92 kg and is 1.95 m tall.   
+
+*/
+
+
+const naruto = {
+  fullName : 'Naruto Uzumaki',
+  mass : 78,
+  height : 1.69,
+  calcBMI : function (){
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  }
+};
+
+const sasuke = {
+  fullName : 'Sasuke Uchiha',
+  mass : 92,
+  height : 1.95,
+  calcBMI : function() {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  }
+};
+
+console.log(naruto.calcBMI(), sasuke.calcBMI());
+
+if(naruto.calcBMI() > sasuke.calcBMI()){
+  console.log(`${naruto.fullName}'s BMI (${naruto.calcBMI()}) is higher than ${sasuke.fullName}'s BMI (${sasuke.calcBMI()}).'`);
+}
+else if(sasuke.calcBMI() > naruto.calcBMI()){
+  console.log(`${sasuke.fullName}'s BMI (${sasuke.calcBMI()}) is higher than ${naruto.fullName}'s BMI (${naruto.calcBMI()}).'`);
+}
