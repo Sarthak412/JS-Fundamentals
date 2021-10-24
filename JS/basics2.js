@@ -542,3 +542,126 @@ console.log(sarthak_Info.calc_Age());   // returns 21
 // logging getSummary to the console
 
 console.log(sarthak_Info.getSummary());
+
+
+/*
+-----------------------------------------
+        Iteration: The For Loop
+----------------------------------------- 
+
+* For loop keeps running while condition is TRUE.
+  It terminates when the condition evaluate to false.
+*/
+
+console.log('For loop in JavaScript');
+
+/*
+ Syntax of a for loop in JavaScript 
+
+ for(initial_value; condition; initial_value increment){
+     statement;
+ }
+
+ For Example: 
+
+ for(let i = 0; i <= 5; i++){
+     console.log(i);
+ }
+
+ O/p: 0 
+      1
+      2
+      3
+      4
+      5
+*/
+
+for(let rep= 1; rep <= 10; rep++){
+    console.log(`Lifting weights repetition ${rep}`);
+}
+
+// Exercise
+
+// Write a JS program to print even numbers from 1 to 20 using for loop
+
+for(let i = 1; i <= 20; i++){        // Using for loop to iterate from 1-20
+    if(i % 2 === 0){            // Checking if i % 2 === 0 which means even
+        console.log(i);
+    }
+}
+
+// returns even numbers from 1 to 20 
+
+/* Similarly, we can do this for printing odd numbers */
+
+for(let i = 1; i <= 20; i++){
+    if(i % 2 !== 0){
+        console.log(i);
+    }
+}
+
+
+/* 
+----------------------------------------------
+    Looping arrays, Breaking and Continuing
+----------------------------------------------    
+*/
+
+
+const pokemon = [
+    'Palkia',
+    'Psychic',
+    10000,
+    'Legendary',
+    'Hyper Beam'
+];
+
+const types = [];
+
+for(let i = 0; i < pokemon.length; i++){
+    // reading from pokemon array
+    console.log(pokemon[i], typeof pokemon[i]);
+
+    // filling types array
+    types[i] = typeof pokemon[i];
+
+    types.push(typeof pokemon[i]);
+
+}
+
+console.log(types);
+
+// Let's see one more example
+
+const years = [2000, 2005, 1999, 2003];
+const ages = [];
+
+for(let i = 0; i < years.length; i++){
+    ages.push(2021 - years[i]);
+}
+
+console.log(ages);
+
+/*
+  Break and Continue statements in for loop
+*/
+
+console.log("------ Only String-------");
+
+for(let i = 0; i < pokemon.length; i++){
+    if(typeof pokemon[i] !== 'string') continue;
+
+    console.log(pokemon[i], typeof pokemon[i]);
+}
+
+console.log("------ Break with number -------");
+
+for(let i = 0; i < pokemon.length; i++){
+    if(typeof pokemon[i] === 'number') break;
+ 
+    console.log(pokemon[i], typeof pokemon[i]);
+}
+
+
+
+
