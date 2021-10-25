@@ -662,6 +662,79 @@ for(let i = 0; i < pokemon.length; i++){
     console.log(pokemon[i], typeof pokemon[i]);
 }
 
+console.log("----Looping Backwards in loops----");
+
+/* 
+    Looping backwards in Loops
+*/
+
+// For example let's take the pokemon array we created
+
+// This "for" loop will loop through array from last element to first element
+// i.e. n to 0  
+
+for(let i = pokemon.length - 1; i >= 0; i--){
+    console.log(i, pokemon[i]);
+}
+
+console.log("--------Array Reversal---------");
+
+const numbers = [1, 2, 3, 4, 5];
+const reversedArr = [];
+
+console.log(numbers);
+
+// lets write a program to reverse the array
+
+for(let i = numbers.length - 1; i >= 0; i--){
+    reversedArr.push(numbers[i]);
+}
+
+console.log(reversedArr); // Outputting the reversed array
+
+/*
+ We can also write loops inside a loop (nesting).
+ Let's see example of nesting loops.
+*/
+
+console.log("||| Loops inside loops |||")
+
+for(let exercise = 1; exercise <= 3; exercise++){
+    console.log(`-----Starting Exercise ${exercise}-----`);
+
+    for(let rep = 1; rep <= 5; rep++){
+        console.log(`Exercise ${exercise}: Weight lifting ${rep}`);
+    }
+}
 
 
+/*
+-------------------------------------
+       While loop in JavaScript  
+-------------------------------------
 
+-> Write the same program to print "Weight lifting" 5 times using while
+   loop.
+   
+*/
+
+console.log("----While loop----")
+
+let rep = 1;
+
+while (rep <= 5) {
+    console.log(`Weight lifting, repetition ${rep}`);
+    rep++;
+}
+
+// Let's create a single dice program  
+
+let dice = Math.trunc(Math.random() * 6) + 1; 
+
+while (dice !== 6) {
+    console.log(`You rolled ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;    
+    if (dice === 6) {
+        console.log("Loop is about to end...");
+    }
+}
